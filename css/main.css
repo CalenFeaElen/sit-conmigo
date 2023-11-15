@@ -1,0 +1,975 @@
+/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/*GLOBAL STYLES */
+body {
+  overflow-x: hidden;
+}
+h1 {
+  font-family: "Titan One", sans-serif;
+}
+
+h2,
+h3,
+h4,
+p,
+label {
+  font-family: "Bree Serif", serif;
+}
+
+button,
+input[type="submit"] {
+  font-family: "Calistoga", cursive;
+}
+
+/*HEADER STYLES */
+
+header {
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 4fr 1fr;
+}
+
+.header-container {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  grid-row: 1 / 2;
+}
+
+header svg {
+  max-width: 50px;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+header h1 {
+  color: #ffffff;
+  font-size: 50px;
+}
+
+/*NAV STYLES */
+
+nav {
+  grid-row: 2 / 3;
+  justify-self: end;
+  margin-right: 5%;
+  align-self: end;
+  padding-bottom: 5px;
+}
+
+nav .nav-container a {
+  text-decoration: none;
+  color: #fff;
+  padding-right: 5px;
+  font-family: "Bree Serif", serif;
+}
+
+.nav-container a:hover {
+  color: #ffde59;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* MAIN STYLES */
+
+main {
+  background-color: #fdecab;
+  padding-bottom: 15px;
+}
+
+.hero h2 {
+  margin-top: 0;
+  text-align: center;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1em;
+  padding-top: 15px;
+}
+
+.hero {
+  background: url("../img/jade-full.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 290px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.hero-container {
+  text-align: center;
+}
+
+#hero-button {
+  align-self: end;
+  padding-bottom: 10px;
+}
+
+.hero button {
+  color: #ffffff;
+  background-color: #d74019;
+  width: 130px;
+  height: 35px;
+  font-size: 14px;
+  border-radius: 20px;
+  border-style: none;
+}
+
+/*WHY BUY STYLES */
+
+.why-buy h3 {
+  color: #d74019;
+  text-align: center;
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+
+.why-buy p {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 15%;
+  margin-right: 15%;
+  padding-top: 15px;
+}
+
+.reason img {
+  max-width: 115px;
+}
+
+.reason h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.reason p {
+  font-size: 16px;
+}
+
+/*CALL TO ACTION STYLES*/
+.cta {
+  background-color: #ffffff;
+  font-size: 24px;
+  min-height: 150px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+}
+
+/*OUR CHAIRS STYLES*/
+
+.our-chairs {
+  background-color: #ffffff;
+  padding-bottom: 30px;
+}
+
+#our-chairs {
+  background: url("../img/patterned-chairs-full.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 325px;
+}
+
+#our-chairs h3 {
+  margin-top: 0;
+  text-align: center;
+  font-size: 30px;
+  padding-top: 20px;
+}
+
+.chair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chair h4 {
+  font-size: 24px;
+  padding-top: 20px;
+}
+
+.chair.left img {
+  max-width: 340px;
+  border-top: #ffde59 solid 20px;
+  border-left: #ffde59 solid 20px;
+}
+
+.chair.right img {
+  max-width: 340px;
+  border-top: #ffde59 solid 20px;
+  border-right: #ffde59 solid 20px;
+}
+
+.chair-button {
+  padding-top: 20px;
+}
+
+.chair-button button {
+  color: #ffffff;
+  background-color: #104c51;
+  width: 130px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-style: none;
+}
+
+/*MISSION STYLES*/
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mission h3 {
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.yolanda {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.yolanda img {
+  max-width: 170px;
+  border: black solid 5px;
+}
+
+.yolanda p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mission-statement {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.mission-statement p {
+  font-size: 18px;
+}
+
+/*CONTACT STYLES*/
+
+.contact {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #104c51;
+  color: #ffffff;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.contact h3 {
+  font-size: 30px;
+}
+
+.form-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 10px;
+}
+
+.form-item label {
+  justify-self: start;
+  padding-left: 20px;
+}
+
+.form-item input {
+  justify-self: center;
+  margin-right: 10%;
+  min-height: 30px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.message label {
+  padding-bottom: 10px;
+}
+
+.message input {
+  min-height: 195px;
+  min-width: 275px;
+}
+
+.contact-button {
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.contact-button input {
+  color: #ffffff;
+  background-color: #d74019;
+  width: 130px;
+  height: 35px;
+  font-size: 16px;
+  border-radius: 20px;
+  border-style: none;
+}
+
+/* FOOTER STYLES */
+
+footer .desktop {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+
+.desktop .contact-info {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.desktop .social-media {
+  justify-self: center;
+  padding-bottom: 20px;
+}
+
+.desktop .social-media a {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/*=======================================================================Helper classes==========================================================================*/
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .sr-only class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: " ";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+  .header-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 60px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+  }
+
+  main {
+    padding-bottom: 30px;
+  }
+
+  .hero {
+    min-height: 550px;
+  }
+
+  .hero h2 {
+    padding-top: 25px;
+    font-size: 32px;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .hero button {
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  #hero-button {
+    padding-bottom: 20px;
+  }
+
+  .why-buy h3 {
+    font-size: 30px;
+  }
+
+  .why-buy p {
+    font-size: 28px;
+  }
+
+  .reason h4 {
+    font-size: 24px;
+  }
+
+  .reason p {
+    font-size: 20px;
+  }
+
+  .reason {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .reasons-to-buy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  #made-with-love {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .cta {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .cta p {
+    justify-self: center;
+    font-size: 32px;
+  }
+
+  #our-chairs {
+    min-height: 500px;
+  }
+
+  #our-chairs h3 {
+    font-size: 45px;
+  }
+
+  .chair.left {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .chair.left h4 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: start;
+    align-self: end;
+  }
+
+  .chair.left img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    justify-self: center;
+  }
+
+  .chair.left.chair-button {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    text-align: start;
+  }
+
+  .chair.right {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .chair.right h4 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: end;
+    align-self: end;
+  }
+
+  .chair.right img {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    justify-self: center;
+  }
+
+  .chair.right.chair-button {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .right .chair-button {
+    text-align: right;
+  }
+
+  .mission h3,
+  .contact h3 {
+    font-size: 45px;
+  }
+
+  .form-item label {
+    font-size: 20px;
+  }
+
+  .form-item input {
+    min-width: 300px;
+  }
+
+  .message label {
+    font-size: 20px;
+  }
+
+  .message input {
+    min-width: 425px;
+    min-height: 225px;
+  }
+
+  .contact {
+    margin-top: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+@media only screen and (min-width: 62em) {
+  .header-container svg {
+    align-self: end;
+  }
+
+  .header-container svg {
+    justify-self: end;
+    max-width: 75px;
+  }
+
+  .header-container h1 {
+    text-align: center;
+    font-size: 5.5em;
+    justify-self: center;
+  }
+
+  nav .nav-container {
+    display: grid;
+    min-width: 350px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 15px;
+  }
+
+  nav .nav-container a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-family: "Bree Serif", serif;
+  }
+
+  .hero {
+    min-height: 800px;
+  }
+
+  .hero button {
+    width: 200px;
+  }
+
+  .hero h2 {
+    padding-top: 55px;
+  }
+
+  .why-buy {
+    padding-top: 60px;
+  }
+
+  .why-buy h3 {
+    font-size: 2.25em;
+  }
+
+  .why-buy p {
+    font-size: 2em;
+  }
+
+  .reasons-to-buy {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-top: 30px;
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+
+  .reason img {
+    max-width: 125px;
+    padding-bottom: 10px;
+  }
+
+  .reason h4 {
+    font-size: 1.875;
+  }
+
+  .reason p {
+    font-size: 1.5em;
+  }
+
+  #fairtrade {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  #fairlabor {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  #made-with-love {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  #our-chairs {
+    min-height: 700px;
+  }
+
+  #our-chairs h3 {
+    font-size: 3em;
+  }
+
+  .cta p {
+    font-size: 2.15em;
+  }
+
+  .chairs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-around;
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+
+  .chair.left,
+  .chair.right {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .chair.left img,
+  .chair.right img {
+    max-width: 450px;
+  }
+
+  .chair.left h4,
+  .chair.right h4 {
+    align-self: center;
+    font-size: 1.75em;
+  }
+
+  .mission {
+    padding-bottom: 50px;
+  }
+
+  .mission h3,
+  .contact h3 {
+    font-size: 3em;
+  }
+
+  .mission-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    justify-content: space-around;
+  }
+
+  .yolanda {
+    justify-self: end;
+  }
+
+  .yolanda p {
+    font-size: 1.125em;
+  }
+
+  .mission-statement p {
+    font-size: 1.5em;
+  }
+
+  .yolanda img {
+    max-width: 300px;
+  }
+
+  .contact {
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
+  .form-item label {
+    padding-left: 15px;
+  }
+
+  .form-item input {
+    min-width: 350px;
+  }
+
+  .form-item {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .message {
+    padding-top: 20px;
+  }
+
+  .message input {
+    min-width: 750px;
+  }
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: #fff !important;
+    color: #000 !important;
+    /* Black prints faster */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+
+  pre {
+    white-space: pre-wrap !important;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
